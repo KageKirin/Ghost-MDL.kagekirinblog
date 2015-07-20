@@ -1,0 +1,12 @@
+<style>
+body::before {
+    background-image: url('{{@blog.cover}}');
+}
+
+{{#foreach posts}}
+.demo-blog .coffee-pic .mdl-card__media {
+  background-image: url('{{asset "images/coffee.jpg"}}');
+}
+{{/foreach}}
+
+</style>
