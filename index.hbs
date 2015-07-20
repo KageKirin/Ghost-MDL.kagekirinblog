@@ -62,68 +62,6 @@
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
-        {{#foreach posts}}
-          {{#if @first}}
-          <!-- first post, displayed a bit smaller -->
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="{{url}}">{{title}}</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              {{excerpt}}
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>{{author}}</strong>
-                <span>{{date published_at timeago="true"}}</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- contact info, always displayed next to first post -->
-          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white">add</i></button>
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-              <img src="{{asset "images/logo.png"}}">
-              +1,337
-            </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-              <div>
-                <strong>{{author}}</strong>
-              </div>
-              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-                <button class="mdl-menu__item mdl-js-ripple-effect">About</button>
-                <button class="mdl-menu__item mdl-js-ripple-effect">Message</button>
-                <button class="mdl-menu__item mdl-js-ripple-effect">Favorite</button>
-                <button class="mdl-menu__item mdl-js-ripple-effect">Search</button>
-              </ul>
-              <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons">more_vert</i>
-              </button>
-            </div>
-          </div>
-
-          {{/if}}  {{!-- these lines should be an 'else', but this did not work, error 500 --}}
-          {{^if @first}}
-
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="{{url}}">{{title}}</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              {{excerpt}}
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>{{author}}</strong>
-                <span>{{date published_at timeago="true"}}</span>
-              </div>
-            </div>
-          </div>
-          {{/if}}
-        {{/foreach}}
 
           <nav class="demo-nav mdl-cell mdl-cell--12-col">
             {{#if prev}}
@@ -144,6 +82,7 @@
             </a>
             {{/if}}
           </nav>
+          {{> index-loop-posts}}
         </div>
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
