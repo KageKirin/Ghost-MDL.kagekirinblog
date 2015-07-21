@@ -1,9 +1,9 @@
 <!-- contact info, always displayed next to first post -->
 <div class="mdl-card mdl-shadow--2dp something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+{{#author}}
   <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white">share {{! link to rss}}</i></button>
 
   <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-  {{#author}}
     <img src="{{image}}">
     {{bio}}
   </div>
@@ -20,6 +20,6 @@
     <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
       <i class="material-icons">more_vert</i>
     </button>
-  {{/author}}
   </div>
 </div>
+{{/author}}
