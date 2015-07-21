@@ -14,4 +14,15 @@ body::before {
 }
 {{/foreach}}
 
+{{#author}}
+.demo-blog .author-{{id}}-{{slug}} .mdl-card__media {
+  {{#if cover}}
+    background-image: url('{{cover}}');
+  {{else}}
+    {{! background-image: url('{{asset "images/coffee.jpg"}}'); }}
+  {{/if}}
+}
+{{/author}}
+
+
 </style>
