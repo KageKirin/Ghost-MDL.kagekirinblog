@@ -1,11 +1,11 @@
 <style>
-#view-source {
-  position: fixed;
-  display: block;
-  right: 0;
-  bottom: 0;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  z-index: 900;
+
+.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
+  {{#if image}}
+    background-image: url('{{image}}');
+  {{else}}
+    background-image: url('../images/road_big.jpg'); {{! default image or depending on tag}}
+  {{/if}}
+  height: 280px;
 }
 </style>
