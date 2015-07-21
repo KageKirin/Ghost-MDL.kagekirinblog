@@ -296,7 +296,7 @@ body .demo-blog {
   padding-left: 48px;
 }
 
-.demo-blog--blogpost .demo-back {
+.demo-blog .demo-back {
   position: absolute;
   top: 16px;
   left: 16px;
