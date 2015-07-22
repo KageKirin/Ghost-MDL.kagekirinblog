@@ -22,10 +22,8 @@
     <meta name="description" content="{{@blog.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{#is "post"}}
-    <title>{{post.title}}</title>
-    {{else is "page"}}
-    <title>{{page.title}}</title>
+    {{#is "post, page"}}
+    <title>{{post.title}}</title>    
     {{else is "author"}}
     <title>{{author.name}} &commat; {{@blog.title}}</title>
     {{else}}
