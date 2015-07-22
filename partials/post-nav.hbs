@@ -1,0 +1,23 @@
+<nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+  {{#next_post}}
+  <a href="{{url}}" class="demo-nav__button">
+  {{else}}
+  <a href="{{@blog.url}}" class="demo-nav__button">
+  {{/next_post}}
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+      <i class="material-icons">arrow_back</i>
+    </button>
+    Newer
+  </a>
+  <div class="section-spacer"></div>
+  {{#prev_post}}
+  <a href="{{url}}" class="demo-nav__button">
+  {{else}}
+  <a href="{{@blog.url}}" class="demo-nav__button">
+  {{/prev_post}}
+    Older
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+      <i class="material-icons">arrow_forward</i>
+    </button>
+  </a>
+</nav>

@@ -5,125 +5,24 @@
 
     <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
+
         <div class="demo-back">
           <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
             <i class="material-icons">arrow_back</i>
           </a>
         </div>
+
         <div class="demo-blog__posts mdl-grid">
           <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3>{{title}}</h3>
-            </div>
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-              <div class="minilogo"></div>
-              <div>
-                <strong>{{author}}</strong>
-                <span>{{date published_at timeago="true"}}</span>
-              </div>
-              <div class="section-spacer"></div>
-              <div class="meta__favorites">425 <i class="material-icons">favorite</i></div>
-              <div><i class="material-icons">bookmark</i></div>
-              <div><i class="material-icons">share</i></div>
-            </div>
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-              {{content}}
-            </div>
-            <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
-              <form>
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <textarea rows=1 class="mdl-textfield__input" id="comment"></textarea>
-                  <label for="comment" class="mdl-textfield__label">Join the discussion</label>
-                </div>
-                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                  <i class="material-icons">check</i>
-                </button>
-              </form>
-              <div class="comment mdl-color-text--grey-700">
-                <header class="comment__header">
-                  <img src="{{asset "images/co1.jpg"}}" class="comment__avatar">
-                  <div class="comment__author">
-                    <strong>James Splayd</strong>
-                    <span>2 days ago</span>
-                  </div>
-                </header>
-                <div class="comment__text">
-                  In in culpa nulla elit esse. Ex cillum enim aliquip sit sit ullamco ex eiusmod fugiat. Cupidatat ad minim officia mollit laborum magna dolor tempor cupidatat mollit. Est velit sit ad aliqua ullamco laborum excepteur dolore proident incididunt in labore elit.
-                </div>
-                <nav class="comment__actions">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                    <i class="material-icons">thumb_up</i>
-                  </button>
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                    <i class="material-icons">thumb_down</i>
-                  </button>
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                    <i class="material-icons">share</i>
-                  </button>
-                </nav>
-                <div class="comment__answers">
-                  <div class="comment">
-                    <header class="comment__header">
-                      <img src="{{asset "images/co2.jpg"}}" class="comment__avatar">
-                      <div class="comment__author">
-                        <strong>John Dufry</strong>
-                        <span>2 days ago</span>
-                      </div>
-                    </header>
-                    <div class="comment__text">
-                      Yep, agree!
-                    </div>
-                    <nav class="comment__actions">
-                      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                        <i class="material-icons">thumb_up</i>
-                      </button>
-                      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                        <i class="material-icons">thumb_down</i>
-                      </button>
-                      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                        <i class="material-icons">share</i>
-                      </button>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {{> post-content}}
+            {{> post-comment-visualonly}}
+            {{> post-comment-googleplus}}
+            {{> post-comment-muut}}
           </div>
 
-          <nav class="demo-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-            {{#next_post}}
-            <a href="{{url}}" class="demo-nav__button">
-            {{else}}
-            <a href="{{@blog.url}}" class="demo-nav__button">
-            {{/next_post}}
-              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
-                <i class="material-icons">arrow_back</i>
-              </button>
-              Newer
-            </a>
-            <div class="section-spacer"></div>
-            {{#prev_post}}
-            <a href="{{url}}" class="demo-nav__button">
-            {{else}}
-            <a href="{{@blog.url}}" class="demo-nav__button">
-            {{/prev_post}}
-              Older
-              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
-                <i class="material-icons">arrow_forward</i>
-              </button>
-            </a>
-          </nav>
+          {{> post-nav}}
         </div>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger"></button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus"></button>
-          </div>
-          <div class="mdl-mini-footer--right-section">
-            <button class="mdl-mini-footer--social-btn social-btn__share"><i class="material-icons">share</i></button>
-          </div>
-        </footer>
+        {{> common-footer}}
       </main>
       <div class="mdl-layout__obfuscator"></div>
     </div>
