@@ -1,22 +1,22 @@
 <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
   <div id="facebook-comments-container" class="comments-container hidden">
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {
-              return;
-          }
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<your-facebook-app-id-here>";
-          fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <div
-        class="fb-comments"
-        data-colorscheme="light"
-        data-numposts="10">
-    </div>
+	<div id="fb-root"></div>
+	<script>
+	  (function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {
+			  return;
+		  }
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<your-facebook-app-id-here>";
+		  fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div
+		class="fb-comments"
 		data-href="{{url absolute="true"}}"
+		data-colorscheme="light"
+		data-numposts="10">
+	</div>
   </div>
 </div>
