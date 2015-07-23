@@ -1,8 +1,4 @@
 <style>
-body::before {
-    background-image: url('{{@blog.cover}}');
-}
-
 {{#foreach posts}}
 .demo-blog .post-{{id}}-{{slug}} .mdl-card__media {
   {{#if image}}
