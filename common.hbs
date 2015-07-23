@@ -19,16 +19,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="{{@blog.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{@blog.description}}"> {{! meta_description}}
 
-    {{#is "post, page"}}
-    <title>{{post.title}}</title>    
-    {{else is "author"}}
-    <title>{{author.name}} &commat; {{@blog.title}}</title>
-    {{else}}
-    <title>{{@blog.title}}</title>
-    {{/is}}
+	<title>{{meta_title}}</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
