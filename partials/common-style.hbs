@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css">
+<link rel="stylesheet" href="{{asset "css/styles.css"}}">
+
+<!-- body background -->
+<style>
+body::before {
+	background-image: url('{{@blog.cover}}');
+}
+</style>
+
+<!-- index posts -->
+{{> index-style-posts}}
+
+<style>
+#view-source {
+	position: fixed;
+	display: block;
+	right: 0;
+	bottom: 0;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	z-index: 900;
+}
+</style>
