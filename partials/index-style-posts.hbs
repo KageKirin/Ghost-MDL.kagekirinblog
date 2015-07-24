@@ -1,12 +1,12 @@
 <style>
 {{#foreach posts}}
 .demo-blog .post-{{id}}-{{slug}} .mdl-card__media {
-  {{#if image}}
+	{{#if image}}
 	background-image: url('{{image}}');
-  {{else}}
+	{{else}}
 	background-image: url('{{asset "images/coffee.jpg"}}');
 	{{! TODO set depending on tags}}
-  {{/if}}
+	{{/if}}
 }
 
 {{> css-author}}

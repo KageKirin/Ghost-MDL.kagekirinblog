@@ -1,23 +1,23 @@
 {{#author}}
 .demo-blog .author-{{id}}-{{slug}} .mdl-card__media {
-  {{#if cover}}
+	{{#if cover}}
 	background-image: url('{{cover}}');
-  {{else}}
+	{{else}}
 	{{! background-image: url('{{asset "images/coffee.jpg"}}'); }}
-  {{/if}}
+	{{/if}}
 }
 .demo-blog .minilogo-author-{{id}}-{{slug}} {
-  width: 44px;
-  height: 44px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  border-radius: 22px;
-  background-color: #F5F5F5;
+	width: 44px;
+	height: 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	border-radius: 22px;
+	background-color: #F5F5F5;
 {{#if image}}
-  background-image: url('{{image}}');
+	background-image: url('{{image}}');
 {{else}}
-  background-image: url('{{asset "images/avatar.png"}}');
+	background-image: url('{{asset "images/avatar.png"}}');
 {{/if}}
 
 }

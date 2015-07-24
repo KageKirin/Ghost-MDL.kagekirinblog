@@ -1,11 +1,11 @@
 {{#foreach posts}}
-  {{#if @first}}
-  {{> index-loop-1st-post}}
-  {{> index-author-info}}
+	{{#if @first}}
+	{{> index-loop-1st-post}}
+	{{> index-author-info}}
 
 
-  {{else}}
-    {{> index-loop-nth-post}}
+	{{else}}
+		{{> index-loop-nth-post}}
 
-  {{/if}}
+	{{/if}}
 {{/foreach}}

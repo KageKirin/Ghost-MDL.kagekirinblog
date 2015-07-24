@@ -1,18 +1,18 @@
 {{!< common}}
 
-    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
-        <div class="demo-back">
-          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
-            <i class="material-icons">arrow_back</i>
-          </a>
-        </div>
+		<div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+			<main class="mdl-layout__content">
+				<div class="demo-back">
+					<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
+						<i class="material-icons">arrow_back</i>
+					</a>
+				</div>
 
-        <div class="demo-blog__posts mdl-grid">
-          {{> index-loop-posts}}
-          {{> index-nav}}
-        </div>
-        {{> common-footer}}
-      </main>
-      <div class="mdl-layout__obfuscator"></div>
-    </div>
+				<div class="demo-blog__posts mdl-grid">
+					{{> index-loop-posts}}
+					{{> index-nav}}
+				</div>
+				{{> common-footer}}
+			</main>
+			<div class="mdl-layout__obfuscator"></div>
+		</div>

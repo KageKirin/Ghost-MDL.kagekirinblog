@@ -1,30 +1,30 @@
 {{!< common}}
 
-    {{#post}}
-    {{> post-style}}
+		{{#post}}
+		{{> post-style}}
 
-    <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
+		<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+			<main class="mdl-layout__content">
 
-        <div class="demo-back">
-          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
-            <i class="material-icons">arrow_back</i>
-          </a>
-        </div>
+				<div class="demo-back">
+					<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
+						<i class="material-icons">arrow_back</i>
+					</a>
+				</div>
 
-        <div class="demo-blog__posts mdl-grid">
-          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-            {{> post-content}}
-            {{> post-comment-visualonly}}
-            {{> post-comment-googleplus}}
-            {{> post-comment-facebook}}
-            {{> post-comment-muut}}
-          </div>
+				<div class="demo-blog__posts mdl-grid">
+					<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+						{{> post-content}}
+						{{> post-comment-visualonly}}
+						{{> post-comment-googleplus}}
+						{{> post-comment-facebook}}
+						{{> post-comment-muut}}
+					</div>
 
-          {{> post-nav}}
-        </div>
-        {{> common-footer}}
-      </main>
-      <div class="mdl-layout__obfuscator"></div>
-    </div>
-  {{/post}}
+					{{> post-nav}}
+				</div>
+				{{> common-footer}}
+			</main>
+			<div class="mdl-layout__obfuscator"></div>
+		</div>
+	{{/post}}
