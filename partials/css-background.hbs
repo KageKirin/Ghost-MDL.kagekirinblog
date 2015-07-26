@@ -1,0 +1,27 @@
+body::before {
+  {{#is "author"}}
+    {{#if author.cover}}
+		  background-image: url('{{author.cover}}');
+    {{else}}
+      background-image: url('{{@blog.cover}}');
+    {{/if}}
+  {{else}}
+    {{#is "tag"}}
+      background-image: url('{{tag.image}}');
+    {{else}}
+      {{#is "post, page"}}
+        {{#if tags}}
+          {{#foreach tags}}
+            {{#if @first}}
+              background-image: url('{{image}}');
+            {{/if}}
+          {{/foreach}}
+        {{else}}
+          background-image: url('{{@blog.cover}}');
+        {{/if}}
+      {{else}}
+        background-image: url('{{@blog.cover}}');
+      {{/is}}
+    {{/is}}
+  {{/is}}
+}
