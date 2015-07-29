@@ -2,9 +2,9 @@
 {{#foreach posts}}
 .demo-blog .post-{{id}}-{{slug}} .mdl-card__media {
 	{{#if image}}
-	background-image: url('{{image}}');
+		background-image: url('{{image}}');
 	{{else}}
-	background-image: url('{{asset "images/coffee.jpg"}}');
+		{{! background-image: url('{{asset "images/coffee.jpg"}}'); }}
 	{{! TODO set depending on tags}}
 	{{/if}}
 }
