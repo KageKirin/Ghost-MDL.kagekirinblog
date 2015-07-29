@@ -1,0 +1,6 @@
+{{#if tags}}
+	in
+	{{#foreach tags}}
+		<a href="{{url}}" title="{{name}}" class="tag-{{slug}}">#{{name}}</a>
+	{{/foreach}}
+{{/if}}
