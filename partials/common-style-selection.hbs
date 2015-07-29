@@ -1,0 +1,9 @@
+{{#is "page"}}
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.indigo-blue.min.css" />
+{{else}}
+	{{#is "post"}}
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-indigo.min.css" />
+	{{else}}
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.pink-red.min.css" />
+	{{/is}}
+{{/is}}
