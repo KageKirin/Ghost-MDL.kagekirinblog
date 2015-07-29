@@ -9,10 +9,9 @@ into a Ghost theme.
 
 ## Status
 
-WIP	
+WIP
 Currently moving large chunks of the hbs templates into hbs partials
 
 ## Demo
 
-Eventually [here](https://kagekirinblog.herokuapp.com/)	
-(Not yet!)
+Eventually [here](https://kagekirinblog.herokuapp.com/) (but not configured correctly yet)
