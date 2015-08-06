@@ -4,10 +4,10 @@
 	{{else}}
 	<a href="{{@blog.url}}" class="demo-nav__button">
 	{{/next_post}}
-		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp">
 			<i class="material-icons">arrow_back</i>
 		</button>
-		Newer
+		<span class="mdl-shadow--4dp">Newer</span>
 	</a>
 	<div class="section-spacer"></div>
 	{{#prev_post}}
@@ -15,8 +15,8 @@
 	{{else}}
 	<a href="{{@blog.url}}" class="demo-nav__button">
 	{{/prev_post}}
-		Older
-		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900">
+		<span class="mdl-shadow--4dp">Older</span>
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp">
 			<i class="material-icons">arrow_forward</i>
 		</button>
 	</a>
