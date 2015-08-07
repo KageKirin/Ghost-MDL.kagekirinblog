@@ -1,0 +1,7 @@
+{{#foreach navigation}}
+	<a href="{{url absolute="true"}}">
+		<button class="mdl-mini-footer--social-btn social-btn__share"><i class="material-icons">{{label}}</i></button>
+	</a>
+
+	{{!-- <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li> --}}
+{{/foreach}}
