@@ -2,18 +2,27 @@
 
 		{{#post}}
 		{{> post-style}}
-
+		{{/post}}
 		<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
-			<main class="mdl-layout__content">
-
-				<div class="demo-back">
-					<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
-						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp">
-							<i class="material-icons">arrow_back</i>
-						</button>
-					</a>
+			<header class="mdl-layout__header mdl-layout__header--transparent">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title">{{meta_title}}</span>
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation -->
+					{{navigation}}
 				</div>
-
+			</header>
+			<div class="demo-back">
+				<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp">
+						<i class="material-icons">arrow_back</i>
+					</button>
+				</a>
+			</div>
+			<main class="mdl-layout__content">
+				{{#post}}
 				<div class="demo-blog__posts mdl-grid">
 					<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 						{{> post-content}}
@@ -26,7 +35,7 @@
 					{{> post-nav}}
 				</div>
 				{{> common-footer}}
+				{{/post}}
 			</main>
 			<div class="mdl-layout__obfuscator"></div>
 		</div>
-	{{/post}}

@@ -1,6 +1,20 @@
 {{!< common}}
 
-		<div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+		<div class="demo-blog mdl-layout mdl-js-layout mdl-layout__header--transparent has-drawer is-upgraded">
+			<header class="mdl-layout__header mdl-layout__header--transparent">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title">{{meta_title}}</span>
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation -->
+					{{navigation}}
+				</div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Title</span>
+				{{navigation}}
+			</div>
 			<main class="mdl-layout__content">
 				<div class="demo-blog__posts mdl-grid">
 					{{> index-loop-posts}}
