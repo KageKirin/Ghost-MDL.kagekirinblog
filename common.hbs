@@ -45,14 +45,54 @@
 
 	{{> common-style}}
 
+	{{#is "post, page"}}
+		{{#post}}
+		{{> post-style}}
+		{{/post}}
+	{{/is}}
+
 	{{ghost_head}}
 	</head>
 
 	<body>
-		{{{body}}}
+		{{#is "post, page"}}
+			<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
+		{{else}}
+			<div class="demo-blog mdl-layout mdl-js-layout mdl-layout__header--transparent has-drawer is-upgraded">
+		{{/is}}
+
+				<header class="mdl-layout__header mdl-layout__header--transparent">
+					<div class="mdl-layout__header-row">
+						<!-- Title -->
+						<span class="mdl-layout-title">{{meta_title}}</span>
+						<!-- Add spacer, to align navigation to the right -->
+						<div class="mdl-layout-spacer"></div>
+						<!-- Navigation -->
+						{{navigation}}
+					</div>
+				</header>
+
+			{{#is "post, page"}}
+				<div class="demo-back">
+					<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="{{@blog.url}}">
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900 mdl-shadow--4dp">
+							<i class="material-icons">arrow_back</i>
+						</button>
+					</a>
+				</div>
+			{{else}}
+				<div class="mdl-layout__drawer">
+					<span class="mdl-layout-title">Title</span>
+					{{navigation}}
+				</div>
+			{{/is}}
+
+				{{{body}}}
+				<div class="mdl-layout__obfuscator"></div>
+		</div>
 
 		{{ghost_foot}}
-		<a href="https://github.com/google/material-design-lite/blob/master/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+		{{!<a href="https://github.com/google/material-design-lite/blob/master/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>}}
 		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
 	</body>
 
