@@ -1,27 +1,32 @@
 body::before {
+	background-color: black;
+	background-image: url('{{@blog.cover}}');
+
 	{{#is "author"}}
 		{{#if author.cover}}
 			background-image: url('{{author.cover}}');
-		{{else}}
-			background-image: url('{{@blog.cover}}');
 		{{/if}}
-	{{else}}
-		{{#is "tag"}}
-			background-image: url('{{tag.image}}');
-		{{else}}
-			{{#is "post, page"}}
-				{{#if tags}}
-					{{#foreach tags}}
-						{{#if @first}}
-							background-image: url('{{image}}');
-						{{/if}}
-					{{/foreach}}
-				{{else}}
-					background-image: url('{{@blog.cover}}');
-				{{/if}}
-			{{else}}
-				background-image: url('{{@blog.cover}}');
-			{{/is}}
-		{{/is}}
 	{{/is}}
+
+	{{!--
+	{{#is "tag"}}
+		background-image: url('{{@blog.cover}}');
+	{{/is}}
+	--}}
+
+	{{#is "post, page"}}
+		{{#if post.image}}
+			background-image: url('{{post.image}}');
+		{{/if}}
+	{{/is}}
+
+	-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+
+/*margin: -5px -10px -10px -5px;*/
+/*overflow: hidden;*/
+clip: rect(5px,295px,295px;5px);
 }
