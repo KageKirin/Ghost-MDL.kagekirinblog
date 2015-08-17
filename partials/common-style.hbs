@@ -14,6 +14,49 @@
 <!-- index posts -->
 {{> index-style-posts}}
 
+<!-- tag area -->
+{{! extract ot its own partial}}
+<style>
+.common-tags-outer {
+
+}
+
+.common-tags-inner {
+
+}
+
+{{#is "post, page"}}
+	{{#post}}
+		{{#foreach tags}}
+			.{{slug}}-logo::before {
+				background-image: url('{{image}}');
+			}
+		{{/foreach}}
+	{{/post}}
+{{/is}}
+
+{{#is "tag"}}
+	{{#tag}}
+		.{{slug}}-logo::before {
+			background-image: url('{{image}}');
+		}
+	{{/tag}}
+{{/is}}
+
+{{#is "author"}}
+	{{#author}}
+		.{{slug}}-logo::before {
+			background-image: url('{{image}}');
+		}
+	{{/author}}
+{{/is}}
+
+
+.index-logo::before {
+	background-image: url('{{@blog.logo}}');
+}
+</style>
+
 <style>
 #view-source {
 	position: fixed;
