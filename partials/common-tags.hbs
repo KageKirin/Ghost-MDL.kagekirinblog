@@ -1,0 +1,27 @@
+<div class="common-tags-outer">
+	{{#is "post, page"}}
+		{{#post}}
+			{{#foreach tags}}
+				<a href={{url absolute="true"}}
+					<div class"common-tags-inner {{slug}}-logo"></div>
+				</a>
+			{{/foreach}}
+		{{/post}}
+	{{/is}}
+
+	{{#is "tag"}}
+		{{#tag}}
+			<div class"common-tags-inner {{slug}}-logo"></div>
+		{{/tag}}
+	{{/is}}
+
+	{{#is "author"}}
+		{{#author}}
+			<div class"common-tags-inner {{slug}}-logo"></div>
+		{{/author}}
+	{{/is}}
+
+	{{#is "index"}}
+		<div class"common-tags-inner index-logo"></div>
+	{{/is}}
+</div>
