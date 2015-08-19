@@ -1,7 +1,27 @@
-body::before {
-	background-color: black;
-	background-image: url('{{@blog.cover}}');
+body {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
 
+body:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+
+	background: #fff url('{{@blog.cover}}') center center fixed no-repeat;
+	background-size: cover;
+
+	{{! changing background-image depending on context}}
 	{{#is "author"}}
 		{{#if author.cover}}
 			background-image: url('{{author.cover}}');
@@ -20,13 +40,13 @@ body::before {
 		{{/if}}
 	{{/is}}
 
-	-webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+	-webkit-filter: blur(50px);	{{! 50px is very heavy blur}}
+		 -moz-filter: blur(50px);
+			 -o-filter: blur(50px);
+			-ms-filter: blur(50px);
+					filter: blur(50px);
 
-/*margin: -5px -10px -10px -5px;*/
-/*overflow: hidden;*/
-clip: rect(5px,295px,295px;5px);
+	-webkit-transform: scale(1.17);	{{! adjust to blur}}
+			-ms-transform: scale(1.17);
+					transform: scale(1.17);
 }
