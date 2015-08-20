@@ -1,4 +1,8 @@
-body {
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+html {
 	position: absolute;
 	z-index: 1;
 	height: 100%;
@@ -6,7 +10,7 @@ body {
 	overflow: hidden;
 }
 
-body:before {
+html:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -49,4 +53,14 @@ body:before {
 	-webkit-transform: scale(1.17);	{{! adjust to blur}}
 			-ms-transform: scale(1.17);
 					transform: scale(1.17);
+}
+
+
+body {
+	position: relative;
+	overflow: auto;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 100%;
 }
