@@ -36,7 +36,7 @@
 {{#is "post, page"}}
 	{{#post}}
 		{{#foreach tags}}
-			.{{slug}}-logo::before {
+			.{{slug}}-logo {
 				background-image: url('{{image}}');
 			}
 		{{/foreach}}
@@ -45,7 +45,7 @@
 
 {{#is "tag"}}
 	{{#tag}}
-		.{{slug}}-logo::before {
+		.{{slug}}-logo {
 			background-image: url('{{image}}');
 		}
 	{{/tag}}
@@ -53,14 +53,14 @@
 
 {{#is "author"}}
 	{{#author}}
-		.{{slug}}-logo::before {
+		.{{slug}}-logo {
 			background-image: url('{{image}}');
 		}
 	{{/author}}
 {{/is}}
 
 
-.index-logo::before {
+.index-logo {
 	background-image: url('{{@blog.logo}}');
 }
 </style>
