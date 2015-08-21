@@ -19,6 +19,22 @@
 {{else}}
 	{{! background-image: url('{{asset "images/avatar.png"}}'); }}
 {{/if}}
+}
 
+.demo-blog .logo-author-{{id}}-{{slug}} {
+	z-index: 1;
+	width: 66px;
+	height: 66px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	border-radius: 33px;
+	background-color: #F5F5F5;
+{{#if image}}
+	background-image: url('{{image}}');
+	background-size: cover;
+{{else}}
+	{{! background-image: url('{{asset "images/avatar.png"}}'); }}
+{{/if}}
 }
 {{/author}}
