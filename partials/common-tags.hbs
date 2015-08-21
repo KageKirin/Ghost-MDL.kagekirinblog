@@ -1,9 +1,13 @@
-<div class="common-tags-outer">
+<aside class="common-tags-outer">
+	common tags outer
 	{{#is "post, page"}}
 		{{#post}}
 			{{#foreach tags}}
 				<a href={{url absolute="true"}}
-					<div class"common-tags-inner {{slug}}-logo"></div>
+					<div class"common-tags-inner {{slug}}-logo tag-logo">
+					{{!--	<img src="{{image}}" alt="{{description}}"/>	--}}
+					{{name}}
+					</div>
 				</a>
 			{{/foreach}}
 		{{/post}}
@@ -11,17 +15,26 @@
 
 	{{#is "tag"}}
 		{{#tag}}
-			<div class"common-tags-inner {{slug}}-logo"></div>
+			<div class"common-tags-inner {{slug}}-logo tag-logo">
+				{{!--	<img src="{{image}}" alt="{{description}}"/>	--}}
+				{{name}}
+			</div>
 		{{/tag}}
 	{{/is}}
 
 	{{#is "author"}}
 		{{#author}}
-			<div class"common-tags-inner {{slug}}-logo"></div>
+			<div class"common-tags-inner {{slug}}-logo tag-logo">
+				{{!--	<img src="{{image}}" alt="{{name}}"/>	--}}
+				{{name}}
+			</div>
 		{{/author}}
 	{{/is}}
 
 	{{#is "index"}}
-		<div class"common-tags-inner index-logo"></div>
+		<div class"common-tags-inner index-logo tag-logo">
+			{{!--	<img src="{{@blog.logo}}" alt="blog logo"/>	--}}
+			{{@blog.title}}
+		</div>
 	{{/is}}
-</div>
+</aside>
