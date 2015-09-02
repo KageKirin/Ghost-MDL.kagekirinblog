@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons"  />
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.1.70/css/materialdesignicons.min.css" />
 <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.0/material.min.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.010/css/hack-extended.min.css">
 
 {{> common-style-selection}}
 <link rel="stylesheet" href="{{asset "css/styles.css"}}" />
@@ -54,6 +55,12 @@
 
 .index-logo::before {
 	background-image: url('{{@blog.logo}}');
+}
+</style>
+
+<style>
+code {
+	font-family: Hack, monospace;
 }
 </style>
 
