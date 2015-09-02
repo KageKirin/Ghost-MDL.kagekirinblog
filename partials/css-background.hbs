@@ -53,6 +53,9 @@ html:before {
 	-webkit-transform: scale(1.17);	{{! adjust to blur}}
 			-ms-transform: scale(1.17);
 					transform: scale(1.17);
+
+
+	mix-blend-mode: multiply;
 }
 
 
@@ -63,4 +66,7 @@ body {
 	padding: 0;
 	width: 100%;
 	height: 100%;
+
+	background: #fff url('{{asset "images/kirinscales.jpg"}}') fixed repeat; {{! center center }}
+	background-size: 500px 500px;
 }
